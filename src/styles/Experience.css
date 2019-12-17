@@ -1,0 +1,25 @@
+.experience_list {
+  list-style-type: none;
+  padding: 0;
+  margin-left: 25px;
+  margin-top: 0;
+}
+
+.experience__list__items {
+  width: 200px;
+  padding: 15px;
+  border-left: 2px solid white;
+}
+
+.border__left {
+  border-left: 3px solid red;
+  transition: border-left 0.1s;
+}
+
+.experience__list__items:hover {
+  cursor: pointer;
+  background-color: aqua;
+}
+
+
+
