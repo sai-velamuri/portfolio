@@ -11,7 +11,9 @@ export default function ExperienceContent() {
   const [state, setState] = useState(0)
 
   const setBorder = (e) => {
-    setState(+e.target.className[0])
+    if (e.target && e.target.tagName === 'LI') {
+      setState(+e.target.className[0])
+    }
   };
 
   return (
