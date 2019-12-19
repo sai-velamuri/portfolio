@@ -34,7 +34,7 @@ export default function About() {
       <br/>
       <br/>
       <h2 style={name}>
-        Sai Sarath Velamuri.
+        Sarath Velamuri.
       </h2>
       <h3 style={content}>
         I build web applications.

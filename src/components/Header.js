@@ -16,7 +16,7 @@ const header_list = {
 };
 
 const list__digits = {
-  color: '#65e0a7',
+  color: '#a8a7ae',
   marginRight: '5px'
 };
 
@@ -28,7 +28,7 @@ const list__style = {
 
 const resume_button = {
   fontSize: '18px',
-  border: '1px solid #65e0a7',
+  border: '1px solid #a8a7ae',
   borderRadius: '5px',
   float: 'right',
   padding: '10px',
@@ -45,7 +45,17 @@ export default function Header({ scrollToFront }) {
 
         </li>
         <li style={resume_button}>
-          <a href={resume} target='_blank' rel="noopener noreferrer">Resume</a>
+          <a 
+            href={resume}
+            target='_blank' 
+            rel="noopener noreferrer"
+            style={{
+              textDecoration: 'none',
+              color: '#e5e4e2'
+            }}
+          >
+            Resume
+          </a>
         </li>
         <li 
           style={list__style}
