@@ -2,10 +2,13 @@ import React from 'react';
 import ExperienceContent from './ExperienceContent';
 
 const aboutMe = {
-  border: '1px solid white',
-  height: '500px',
-  marginBottom: '300px'
+  height: '100vh',
+  padding: '0 150px',
+  display: 'flex',
+  flexFlow: 'column wrap',
+  alignContent: 'center'
 }
+
 
 const Experience = React.forwardRef((props, ref) => {
   return (
@@ -14,7 +17,9 @@ const Experience = React.forwardRef((props, ref) => {
       style={aboutMe}
       ref={ref}
     >
-      <span>02. </span>Where I've Worked
+      <h3>
+        02. Where I've Worked
+      </h3>
       <ExperienceContent />
     </div>
   )

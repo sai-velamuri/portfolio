@@ -2,9 +2,12 @@ import React from 'react';
 import emailInfo from '../config/email';
 
 const aboutMe = {
-  border: '1px solid white',
-  height: '500px',
-  textAlign: 'center'
+  textAlign: 'center',
+  height: '100vh',
+  padding: '0 150px',
+  display: 'flex',
+  flexFlow: 'column wrap',
+  justifyContent: 'center'
 }
 
 const getInTouch = {
@@ -22,15 +25,13 @@ const Contact = React.forwardRef((props, ref) => {
       style={aboutMe}
       ref={ref}
     >
-      <span>03. </span>What's Next?
+      <h3>03. What's Next?</h3>
 
       <h3>Get In Touch</h3>
-      <div style={{display: 'flex', justifyContent: 'center'}}>
-        <div style={{width: '500px'}}>
-          I'm a Permanent Resident of Canada who is actively looking for 
-          opportunities (Full-Time, Contract-To-Hire, Consulting etc). 
-          My inbox is always open.
-        </div>
+      <div style={{minWidth: '500px'}}>
+        I'm a Permanent Resident of Canada who is actively looking for 
+        opportunities (Full-Time, Contract-To-Hire, Consulting etc).
+        <h4>My inbox is always open.</h4>
       </div>
 
       <div style={{textAlign: 'center', marginTop: '25px'}}>

@@ -1,0 +1,4 @@
+.listElementHover:hover {
+  cursor: pointer;
+  color: white;
+}

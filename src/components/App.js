@@ -11,12 +11,10 @@ const container = {
   color: '#e5e4e2',
 }
 
-const aboutStyle = {
-  marginLeft: '100px',
-}
-
 export default function App() {
   const [displayLoadingGif, setDisplayLoadingGif] = useState(true)
+  const [displayHeader, setDisplayHeader] = useState(true)
+  const [prevScrollY, setPrevScrollY] = useState(-1)
   const aboutMeRef = useRef(null)
   const experienceRef = useRef(null)
   const contactRef = useRef(null)
@@ -50,8 +48,20 @@ export default function App() {
   useEffect(() => {
     setTimeout(() => {
       setDisplayLoadingGif(false)
-    }, 3000)
+    }, 4000)
   }, [])
+
+  useEffect(() => {
+    window.onscroll = function() {
+      if (window.scrollY < prevScrollY) {
+        setDisplayHeader(true)
+      }
+      else if (window.scrollY - prevScrollY > 8){
+        setDisplayHeader(false)
+      }
+      setPrevScrollY(window.scrollY)
+    }
+  })
 
   return (
     <div style={container}>
@@ -59,8 +69,11 @@ export default function App() {
         displayLoadingGif ?
         <LoadingGif /> :
         <div>
-          <Header scrollToFront={scrollToFront}/>
-          <div style={aboutStyle}>
+          <Header 
+            display={displayHeader}
+            scrollToFront={scrollToFront}
+          />
+          <div>
             <About />
             <AboutMe ref={aboutMeRef}/>
             <Experience ref={experienceRef} />

@@ -2,9 +2,9 @@ import React from 'react';
 import AboutMeContent from './AboutMeContent';
 
 const aboutMe = {
-  border: '1px solid white',
   height: '500px',
-  marginBottom: '300px'
+  marginBottom: '300px',
+  padding: '0 150px'
 }
 
 const AboutMe = React.forwardRef((props, ref) => {
@@ -14,7 +14,7 @@ const AboutMe = React.forwardRef((props, ref) => {
       style={aboutMe}
       ref={ref}
     >
-      <span>01. </span>About Me
+      <h3>01. About Me</h3>
       <AboutMeContent />
     </div>
   )

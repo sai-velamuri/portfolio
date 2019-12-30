@@ -3,7 +3,8 @@ import '../styles/Experience.css';
 import companyData from '../data/companyExp';
 
 const experienceContent = {
-  display: 'flex'
+  display: 'flex',
+  marginTop: '10px',
 }
 
 export default function ExperienceContent() {

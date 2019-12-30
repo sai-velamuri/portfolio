@@ -1,5 +1,5 @@
 import React from 'react';
-import displayPic from '../assets/displayPic.JPG';
+import displayPic from '../assets/displayPic.jpeg';
 
 const aboutMeContentContainer = {
   display: 'flex',
@@ -7,7 +7,7 @@ const aboutMeContentContainer = {
 };
 
 const aboutMeContentLeftDiv = {
-  width: '50%'
+  marginRight: '30px'
 };
 
 const aboutMeContentRightDiv = {
@@ -17,10 +17,7 @@ const aboutMeContentRightDiv = {
 }
 
 const displayPicStyle = {
-  position: 'relative',
-  top: '-10px',
-  left: '-15px',
-  width: '200px',
+  width: '220px',
   height: '300px',
   borderRadius: '10px'
 }
@@ -43,7 +40,7 @@ const listOfTech = {
 export default function AboutMeContent() {
   return (
     <div style={aboutMeContentContainer}>
-      <div style={aboutMeContentLeftDiv}>Hello! I'm Sarath, a software engineer based in Toronto, ON who enjoys building things that live on the internet. I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces using modern frameworks.
+      <div style={aboutMeContentLeftDiv}>Hello! I'm Sarath, a software engineer based in Toronto, ON who enjoys building things that live on the internet. Occasionally, I develop exceptional websites and web apps that provide intuitive, pixel-perfect user interfaces using modern frameworks.
 
       Shortly after graduating from Colorado State University, I joined the information security team at Apple as a Consultant where I worked on a wide variety of interesting and meaningful projects on a daily basis.
 
