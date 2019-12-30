@@ -6,7 +6,7 @@ const aboutMe = {
   padding: '0 150px',
   display: 'flex',
   flexFlow: 'column wrap',
-  alignContent: 'center'
+  justifyContent: 'center'
 }
 
 

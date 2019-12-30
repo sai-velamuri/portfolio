@@ -4,20 +4,14 @@ import '../styles/Header.css';
 
 const header = {
   position: 'fixed',
+  width: '100%',
   top: '0px',
   height: '75px',
   boxShadow: '0 2px 2px rgba(0, 0, 0, 0.5)',
   marginBottom: '50px',
   backgroundColor: 'black',
-  zIndex: 11,
   display: 'flex',
   justifyContent: 'flex-end'
-}
-
-const removeHeader = {
-  visibility: 'hidden',
-  height: '75px',
-  marginBottom: '50px',
 }
 
 const header_list = {
@@ -48,10 +42,11 @@ const resume_button = {
   marginRight: '30px'
 }
 
-export default function Header({ scrollToFront, display }) {
+export default function Header({ scrollToFront }) {
+  console.log('rendering header')
   return (
     <div 
-      style={display ? header : removeHeader}>
+      style={header}>
       <ul 
         style={header_list}
       >
