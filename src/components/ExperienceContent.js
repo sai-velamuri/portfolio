@@ -4,7 +4,9 @@ import companyData from '../data/companyExp';
 
 const experienceContent = {
   display: 'flex',
+  flexFlow: 'row wrap',
   marginTop: '10px',
+  justifyContent: 'space-around'
 }
 
 export default function ExperienceContent() {
@@ -33,7 +35,10 @@ export default function ExperienceContent() {
           ))
         }
       </ul>
-      <div>
+      <div style={{
+          minWidth: '500px',
+          maxWidth: '750px',
+      }}>
       <h3>{companyData[state].role}</h3>
       <h4>{companyData[state].location}</h4>
       <h5>{companyData[state].duration}</h5>

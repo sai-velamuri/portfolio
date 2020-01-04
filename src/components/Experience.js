@@ -3,10 +3,7 @@ import ExperienceContent from './ExperienceContent';
 
 const aboutMe = {
   height: '100vh',
-  padding: '0 150px',
-  display: 'flex',
-  flexFlow: 'column wrap',
-  justifyContent: 'center'
+  padding: '0 150px', 
 }
 
 
