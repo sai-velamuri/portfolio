@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect } from "react";
-import styled, { injectGlobal } from "styled-components";
+import styled, { createGlobalStyle } from "styled-components";
 import LoadingGif from "./LoadingGif";
 import Header from "./Header";
 import About from "./About/About";
@@ -7,7 +7,7 @@ import AboutMe from "./AboutMe/AboutMe";
 import Experience from "./Experience/Experience";
 import Contact from "./Contact";
 
-injectGlobal`
+const GlobalFont = createGlobalStyle`
   @font-face {
     font-family: "SF Pro Text";
   }
@@ -86,6 +86,7 @@ export default function App() {
 
   return (
     <AppContainer>
+      <GlobalFont />
       {displayLoadingGif ? (
         <LoadingGif />
       ) : (
