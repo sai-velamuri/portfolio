@@ -7,6 +7,7 @@ const AboutMeContainer = styled.section`
   flex-flow: column wrap;
   justify-content: center;
   min-height: 100vh;
+  padding: 0 150px;
 `;
 
 const Heading3 = styled.h3 `
@@ -15,6 +16,7 @@ const Heading3 = styled.h3 `
   @media all and (max-width: 750px) {
     font-size: 1em;
   }
+  color: rgba(0,0,0,0.8);
 `;
 
 const AboutMe = React.forwardRef((props, ref) => {

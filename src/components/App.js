@@ -9,22 +9,20 @@ import MobileHeader from "./MobileHeader";
 import Contact from "./Contact";
 
 const AppContainer = styled.div`
-   {
-    background-color: black;
-    font-family: "SF Pro Text";
-    color: #e5e4e2;
-    padding: 0 150px;
-    text-align: left;
-    @media all and (max-width: 750px) {
-      padding: 0 50px;
-    };
-    @media all and (max-width: 400px) {
-      padding: 0 30px;
-    };
-    @media all and (min-width: 1500px) {
-      padding: 0 300px;
-    };
-  }
+  background-color: #fbfbfd;
+  font-family: "SF Pro Text";
+  color: silver;
+  text-align: left;
+  box-sizing: border-box;
+  @media all and (max-width: 750px) {
+    padding: 0 50px;
+  };
+  @media all and (max-width: 400px) {
+    padding: 0 30px;
+  };
+  @media all and (max-width: 1000px) {
+    padding: 0 300px;
+  };
 `;
 
 export default function App() {
@@ -32,7 +30,6 @@ export default function App() {
   const aboutMeRef = useRef(null);
   const experienceRef = useRef(null);
   const contactRef = useRef(null);
-  const [dimensions, setDimensions] = useState(751);
 
   const scrollToFront = compName => {
     switch (compName) {
@@ -66,27 +63,11 @@ export default function App() {
     }
   };
 
-  const updateWindowDimensions = () => {
-    setDimensions(window.innerWidth);
-  };
-
   useEffect(() => {
-    setDimensions(window.innerWidth);
-    window.addEventListener("resize", updateWindowDimensions);
     setTimeout(() => {
       setDisplayLoadingGif(false);
     });
-
-    return () => {
-      window.removeEventListener("resize", updateWindowDimensions);
-    };
   }, []);
-
-  {
-    /* {dimensions < 751 ? 
-    <MobileHeader /> : 
-  } */
-}
 
   return (
     <AppContainer>
@@ -102,6 +83,8 @@ export default function App() {
         </>
       )}
     </AppContainer>
+
+    
     // <div style={container}>
     //   {
     //     displayLoadingGif ?

@@ -1,90 +1,90 @@
 import React from 'react';
 import resume from '../assets/SarathVelamuri.pdf';
-import '../styles/Header.css';
+import styled from 'styled-components';
 
-const header = {
-  position: 'fixed',
-  width: '100%',
-  top: '0px',
-  height: '75px',
-  boxShadow: '0 2px 2px rgba(0, 0, 0, 0.5)',
-  marginBottom: '50px',
-  backgroundColor: 'black',
-  display: 'flex',
-  justifyContent: 'flex-end'
-}
+const headerListItems = [
+  {
+    display: '01. About',
+    emit: 'AboutMe'
+  },
+  {
+    display: '02. Experience',
+    emit: 'Experience'
+  },
+  {
+    display: '03. Contact',
+    emit: 'Contact'
+  },
+  { display: 'Resume'}
+];
 
-const header_list = {
-  listStyleType: 'none',
-  margin: 0,
-  padding: '15px',
-  display: 'flex',
-  justifyContent: 'flex-end',
-  flexFlow: 'row wrap'
-};
+const HeaderContainer = styled.div`
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  background-color: rgba(0,0,0,0.8);
+`;
 
-const list__digits = {
-  color: '#a8a7ae',
-  marginRight: '5px'
-};
+const HeaderList = styled.ul`
+  list-style-type: none;
+  margin: 0 25px 0 0;
+  padding: 0;
+  display: flex;
+  justify-content: flex-end;
+`;
 
-const list__style = {
-  padding: '10px',
-  margin: '5px'
-}
+const HeaderListItem = styled.li`
+  padding: 10px;
+`;
 
-const resume_button = {
-  fontSize: '18px',
-  border: '1px solid #a8a7ae',
-  borderRadius: '5px',
-  float: 'right',
-  padding: '10px',
-  marginRight: '30px'
-}
+const ItemButton = styled.button`
+  border: none;
+  background: none;
+  color: silver;
+  outline: none;
+  &:hover {
+    color: white;
+    cursor: pointer;
+  }
+`;
+
+const ResumeButton = styled.a`
+  text-decoration: none;
+  color: silver;
+  &:hover {
+    color: white;
+  }
+`;
 
 export default function Header({ scrollToFront }) {
-  console.log('rendering header')
   return (
-    <div 
-      style={header}>
-      <ul 
-        style={header_list}
-      >
-        <li 
-          style={list__style}
-          onClick={() => scrollToFront('AboutMe')}
-          className='listElementHover'
-          > 
-          <a href='#aboutMe'>01. About</a>
-        </li>
-        <li 
-          style={list__style}
-          onClick={() => scrollToFront('Experience')}
-          className='listElementHover'>
-          <span style={list__digits}>02.</span>
-          Experience
-        </li>
-        <li 
-          style={list__style}
-          onClick={() => scrollToFront('Contact')}
-          className='listElementHover'>
-          <span style={list__digits}>03.</span>
-          Contact
-        </li>
-        <li style={resume_button}>
-          <a 
-            href={resume}
-            target='_blank' 
-            rel="noopener noreferrer"
-            style={{
-              textDecoration: 'none',
-              color: '#e5e4e2'
-            }}
-          >
-            Resume
-          </a>
-        </li>
-      </ul>
-    </div>
+    <HeaderContainer>
+      <HeaderList>
+        {
+          headerListItems.map(item => (
+            <HeaderListItem key={item.display}>
+              { item.display.toLowerCase() === 'resume' ? 
+                <ItemButton>
+                  <ResumeButton 
+                    href={resume} 
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {item.display}
+                  </ResumeButton>  
+                </ItemButton>
+                
+                : 
+                <ItemButton
+                  onClick={() => scrollToFront(item.emit)}
+                >
+                  {item.display}
+                </ItemButton>
+              }
+            </HeaderListItem>
+          ))
+        }
+      </HeaderList>
+    </HeaderContainer>
   )
 }

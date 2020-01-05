@@ -17,6 +17,7 @@ const AboutMeContentContainer = styled.div`
     display: block;
     font-size: 0.8em;
   }
+  color: #666666;
 `;
 
 const AboutMeContentLeftDiv = styled.div`
@@ -30,9 +31,8 @@ const AboutMeContentLeftDiv = styled.div`
 const SkillSetContainer = styled.ul`
   display: grid;
   grid-template-columns: auto auto;
-  margin: 0;
   padding: 0;
-  margin: 15px 0 15px 14px;
+  margin: 15px 0 15px 19px;
   height: 100px;
 `;
 
@@ -49,22 +49,26 @@ const AboutMeDisplayPicDiv = styled.div`
   }
 `;
 
+const UniversityButton = styled.a`
+  text-decoration: none;
+  color: #2997ff;
+  &:hover {
+    color: #06C;
+  }
+`;
+
 export default function AboutMeContent() {
   return (
     <AboutMeContentContainer>
       <AboutMeContentLeftDiv>
         {aboutMeContent1}
-        <a
+        <UniversityButton
           href="https://www.colostate.edu/"
-          style={{
-            color: "rgb(101, 224, 167)",
-            textDecoration: "none"
-          }}
           rel="noopener noreferrer"
           target="_blank"
         >
           Colorado State University
-        </a>
+        </UniversityButton>
         {aboutMeContent2}
         <SkillSetContainer>
           {skillSet.map(skill => (
