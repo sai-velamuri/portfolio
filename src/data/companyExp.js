@@ -1,5 +1,6 @@
 const data = {
   0: {
+    client: 'Apple, Inc',
     role: 'Consultant JavaScript Developer',
     duration: 'Oct 2018 – Aug 2019',
     location: 'California, USA',
@@ -14,6 +15,7 @@ const data = {
   ]
 },
   1: {
+    client: 'Apple, Inc',
     role: 'Consultant JavaScript Developer',
     duration: 'Nov 2016 - Aug 2018',
     location: 'California, USA',
@@ -29,6 +31,7 @@ const data = {
     'Providing metrics depending on the demand for the item and making sure there is no shortage for the devices.'
   ]},
   2: {
+    client: 'TCS',
     role: 'Assistant System Engineer - Trainee',
     duration: 'Dec 2013 - July 2014',
     location: 'India',

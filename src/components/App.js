@@ -1,12 +1,22 @@
 import React, { useRef, useState, useEffect } from "react";
-import styled from "styled-components";
+import styled, { injectGlobal } from "styled-components";
 import LoadingGif from "./LoadingGif";
 import Header from "./Header";
 import About from "./About/About";
 import AboutMe from "./AboutMe/AboutMe";
-import Experience from "./Experience";
-import MobileHeader from "./MobileHeader";
+import Experience from "./Experience/Experience";
 import Contact from "./Contact";
+
+injectGlobal`
+  @font-face {
+    font-family: "SF Pro Text";
+  }
+
+  body {
+    font-family: "SF Pro Text";
+  }
+`;
+
 
 const AppContainer = styled.div`
   background-color: #fbfbfd;
@@ -23,6 +33,11 @@ const AppContainer = styled.div`
   @media all and (max-width: 1000px) {
     padding: 0 300px;
   };
+`;
+
+const Gutter = styled.div`
+  height: 10px;
+  background-color: #fff;
 `;
 
 export default function App() {
@@ -74,13 +89,15 @@ export default function App() {
       {displayLoadingGif ? (
         <LoadingGif />
       ) : (
-        <div style={{fontFamily: 'SF Pro Text'}}>
+        <>
           <Header 
             scrollToFront={scrollToFront}
           />
           <About />
           <AboutMe ref={aboutMeRef} />
-        </div>
+          <Gutter></Gutter>
+          <Experience ref={experienceRef} />
+        </>
       )}
     </AppContainer>
 
@@ -93,7 +110,7 @@ export default function App() {
     //       <div>
     //         <About />
     //
-    //         {/* <Experience ref={experienceRef} />
+    //         {/*  />
     //         <Contact ref={contactRef} /> */}
     //       </div>
     //     </div>
