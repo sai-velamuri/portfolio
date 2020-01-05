@@ -1,4 +1,4 @@
 @font-face {
   font-family: 'SF Pro Text';
-  src: local('SF Pro Text'), url('./fonts/sfpro.ttf') format('truetype')
+  src: local('SF Pro Text'), url(./fonts/sfpro.ttf) format('truetype')
 }

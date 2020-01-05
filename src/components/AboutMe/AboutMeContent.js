@@ -53,35 +53,28 @@ export default function AboutMeContent() {
   return (
     <AboutMeContentContainer>
       <AboutMeContentLeftDiv>
-        {aboutMeContent1} 
-        <a 
-          href='https://www.colostate.edu/' 
+        {aboutMeContent1}
+        <a
+          href="https://www.colostate.edu/"
           style={{
-            color: 'rgb(101, 224, 167)', 
-            textDecoration: 'none'
-          }} 
-          target='_blank'
+            color: "rgb(101, 224, 167)",
+            textDecoration: "none"
+          }}
+          rel="noopener noreferrer"
+          target="_blank"
         >
           Colorado State University
         </a>
         {aboutMeContent2}
         <SkillSetContainer>
-            {
-              skillSet.map(skill => 
-                <li
-                  key={skill}
-                >
-                  {skill}
-                </li>)
-            }
-          </SkillSetContainer>
+          {skillSet.map(skill => (
+            <li key={skill}>{skill}</li>
+          ))}
+        </SkillSetContainer>
       </AboutMeContentLeftDiv>
       <AboutMeDisplayPicDiv>
-        <AboutMeDisplayPic
-          src={displayPic} 
-          alt='displaypic' 
-        />
+        <AboutMeDisplayPic src={displayPic} alt="displaypic" />
       </AboutMeDisplayPicDiv>
     </AboutMeContentContainer>
-  )
+  );
 }
