@@ -23,6 +23,7 @@ const HeaderContainer = styled.div`
   top: 0;
   width: 100vw;
   background-color: rgba(0,0,0,0.8);
+  font-family: "SF Pro Text";
 `;
 
 const HeaderList = styled.ul`

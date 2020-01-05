@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import AboutMeContent from './AboutMeContent';
 
 const AboutMeContainer = styled.section`  
+  font-family: "SF Pro Text";
   display: flex;
   flex-flow: column wrap;
   justify-content: center;

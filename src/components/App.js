@@ -74,17 +74,17 @@ export default function App() {
       {displayLoadingGif ? (
         <LoadingGif />
       ) : (
-        <>
+        <div style={{fontFamily: 'SF Pro Text'}}>
           <Header 
             scrollToFront={scrollToFront}
           />
           <About />
           <AboutMe ref={aboutMeRef} />
-        </>
+        </div>
       )}
     </AppContainer>
 
-    
+
     // <div style={container}>
     //   {
     //     displayLoadingGif ?
