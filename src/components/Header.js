@@ -55,8 +55,7 @@ export default function Header({ scrollToFront }) {
           onClick={() => scrollToFront('AboutMe')}
           className='listElementHover'
           > 
-          <span style={list__digits}>01.</span> 
-          About 
+          <a href='#aboutMe'>01. About</a>
         </li>
         <li 
           style={list__style}

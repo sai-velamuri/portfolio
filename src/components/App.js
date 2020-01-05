@@ -14,12 +14,16 @@ const AppContainer = styled.div`
     font-family: "SF Pro Text";
     color: #e5e4e2;
     padding: 0 150px;
-    text-align: justify;
-    @media all and (max - width: 750 px) {
-      .container {
-        padding: 0 50px;
-      }
-    }
+    text-align: left;
+    @media all and (max-width: 750px) {
+      padding: 0 50px;
+    };
+    @media all and (max-width: 400px) {
+      padding: 0 30px;
+    };
+    @media all and (min-width: 1500px) {
+      padding: 0 300px;
+    };
   }
 `;
 
@@ -33,25 +37,31 @@ export default function App() {
   const scrollToFront = compName => {
     switch (compName) {
       case "AboutMe":
-        aboutMeRef.current.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
+        if (aboutMeRef && aboutMeRef.current) {
+          aboutMeRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }
         break;
       case "Experience":
-        experienceRef.current.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
+        if (experienceRef && experienceRef.current) {
+          experienceRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }
         break;
       case "Contact":
-        contactRef.current.scrollIntoView({
-          behavior: "smooth",
-          block: "center"
-        });
+        if (contactRef && contactRef.current) {
+          contactRef.current.scrollIntoView({
+            behavior: "smooth",
+            block: "center"
+          });
+        }
         break;
       default:
-        console.log("invalid");
+        alert("invalid choice");
         break;
     }
   };
@@ -65,7 +75,7 @@ export default function App() {
     window.addEventListener("resize", updateWindowDimensions);
     setTimeout(() => {
       setDisplayLoadingGif(false);
-    }, 3000);
+    });
 
     return () => {
       window.removeEventListener("resize", updateWindowDimensions);
@@ -75,11 +85,8 @@ export default function App() {
   {
     /* {dimensions < 751 ? 
     <MobileHeader /> : 
-    <Header 
-      scrollToFront={scrollToFront}
-    />
   } */
-  }
+}
 
   return (
     <AppContainer>
@@ -87,6 +94,9 @@ export default function App() {
         <LoadingGif />
       ) : (
         <>
+          <Header 
+            scrollToFront={scrollToFront}
+          />
           <About />
           <AboutMe ref={aboutMeRef} />
         </>

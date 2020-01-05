@@ -21,7 +21,7 @@ const AboutMeContentContainer = styled.div`
 
 const AboutMeContentLeftDiv = styled.div`
   width: 70%;
-  @media all and (max-width: 750px) {
+  @media all and (max-width: 770px) {
     display: block;
     width: 100%;
   }
@@ -44,7 +44,7 @@ const AboutMeDisplayPic = styled.img`
 
 const AboutMeDisplayPicDiv = styled.div`
   width: 220px;
-  @media all and (max-width: 750px) {
+  @media all and (max-width: 770px) {
     margin: auto;
   }
 `;
