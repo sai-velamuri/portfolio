@@ -1,0 +1,24 @@
+.hamburgerUL {
+  height: '75px';
+  margin: 0;
+  list-style-type: none;
+  padding: '5px;
+}
+
+.hamburgerLI {
+  background-color: 'silver';
+  height: '3px';
+  margin: '5px;
+}
+
+#li1 {
+  width: 35px;
+}
+
+#li2 {
+  width: 28px;
+}
+
+#li3 {
+  width: 20px;
+}
