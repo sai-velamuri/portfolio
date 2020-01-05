@@ -5,8 +5,7 @@ const loadingGifStyle = {
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  height: '100vh',
-  width: '100vw'
+  height: '100vh'
 }
 
 export default function LoadingGif() {
@@ -17,7 +16,10 @@ export default function LoadingGif() {
       <img 
         src={LoadingGifIcon} 
         alt='loadingGif'
-        style={{}}
+        style={{
+          width: '200px',
+          height: '150px'
+        }}
       />
     </div>
   )
