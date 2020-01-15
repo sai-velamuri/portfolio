@@ -24,15 +24,6 @@ const AppContainer = styled.div`
   color: silver;
   text-align: left;
   box-sizing: border-box;
-  @media all and (max-width: 750px) {
-    padding: 0 50px;
-  };
-  @media all and (max-width: 400px) {
-    padding: 0 30px;
-  };
-  @media all and (max-width: 1000px) {
-    padding: 0 300px;
-  };
 `;
 
 const Gutter = styled.div`
@@ -94,10 +85,10 @@ export default function App() {
           <Header 
             scrollToFront={scrollToFront}
           />
-          <About />
+          {/* <About />
           <AboutMe ref={aboutMeRef} />
-          <Gutter></Gutter>
-          <Experience ref={experienceRef} />
+          <Gutter></Gutter> */}
+          {/* <Experience ref={experienceRef} /> */}
         </>
       )}
     </AppContainer>

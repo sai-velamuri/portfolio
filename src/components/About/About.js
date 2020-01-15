@@ -21,7 +21,6 @@ const AboutContainer = styled.section`
   justify-content: center;
   padding: 0 150px;
   background-color: black;
-  font-family: "SF Pro Text";
 `;
 
 const Heading1 = styled.h4`
